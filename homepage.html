@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualise Your Health</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@402&family=Reddit+Mono:wght@369&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Visualise Your Health</h1>
+    </header>
+
+    <section id="upload">
+        <h1>Upload CT Scan of Lungs</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-input-container">
+                <input id="fileInput" type="file" name="image" accept="image/*">
+                <label for="fileInput" class="file-input-label">Choose a file</label>
+            </div>
+            <button type="submit">PREDICT</button>
+        </form>
+        <div id="notification" class="notification" style="display: none;">
+            File uploaded successfully!
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function () {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            notification.textContent = 'File uploaded successfully!';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    background-color: #f7ecec;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #0077b6;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: white;
+    width: 100%;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Upload Section Styling */
+#upload {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.file-input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #0077b6;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.file-input-label {
+    padding: 10px;
+    border: 2px dashed #0077b6;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]:hover+.file-input-label {
+    background-color: #e0f7fa;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: #005f99;
+}
+
+/* Notification Styling */
+.notification {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

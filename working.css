@@ -1,0 +1,117 @@
+/* Animation for header */
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInFromTop 1s ease-out forwards;
+    /* Animation duration: 1s */
+}
+
+/* Animation for main */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    animation: slideInFromLeft 1s ease-out forwards;
+    /* Animation duration: 1s */
+}
+
+/* Animation for section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out forwards;
+    /* Animation duration: 1s */
+}
+
+/* Animation for footer */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    background-color: black;
+    padding: 20px 0;
+    animation: fadeInFromBottom 1s ease-out forwards;
+    /* Animation duration: 1s */
+}
+p{
+    font-size: 20px;
+}
+h2{
+    font-size: 30px;
+}
+/* Animation for image container */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container {
+    text-align: center;
+    animation: fadeInFromBottom 1s ease-out forwards;
+    margin-bottom: 20px;
+    /* Adjust margin as needed */
+}
+
+.image-container img {
+    max-width: 30%;
+    /* Decrease the size further */
+    height: auto;
+}
