@@ -16,7 +16,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load the trained model
-model = load_model(r'C:\Users\harsh\OneDrive\Desktop\demo\model.h5')  # Replace with the actual path to your model
+model = load_model('model.h5')  # Replace with the actual path to your model
 
 # Image parameters
 img_height, img_width = 224, 224
